@@ -19,5 +19,7 @@ CREATE TABLE Card_Info (
     rarity VARCHAR(30) NOT NULL,
     edition VARCHAR(30) NOT NULL,
     artist_name VARCHAR(30) NOT NULL,
-    FOREIGN KEY (id)
+    user_id INT NOT NULL
+    FOREIGN KEY (user_id)
+    REFERENCES User_Info(id),
 );
