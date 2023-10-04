@@ -3,8 +3,6 @@ const sequelize = require('../config/connection');
 
 class User extends Model {}
 
-// TODO: Add validations to the User model
-
 User.init(
   {
     id: {
@@ -17,7 +15,8 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isAlphanumeric: true,
+          min: [8],
+          isAlphanumeric: true,
       }
     },
     email: {
@@ -32,9 +31,18 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        min: [8],
+          min: [8],
+          isAlphanumeric: true,
       }
     },
+    },
+    {
+        hooks: {
+            beforeCreate: async (newUserData) => {
+                newUserData.email = await newUserData.email.toLowerCase();
+                return newUserData;
+            }
+        }        
   },
   {
     sequelize,
