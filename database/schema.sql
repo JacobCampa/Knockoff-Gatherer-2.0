@@ -4,9 +4,6 @@ CREATE DATABASE users_db;
 
 USE users_db;
 
-CREATE TABLE
-
-
 CREATE TABLE User_Info (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_name VARCHAR(30) NOT NULL,
