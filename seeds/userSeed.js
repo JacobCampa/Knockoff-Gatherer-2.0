@@ -1,4 +1,4 @@
-const ( CardInfo ) = require('../models');
+const { CardInfo } = require('../models');
 
 const cardData = [
     {
