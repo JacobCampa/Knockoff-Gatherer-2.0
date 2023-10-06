@@ -23,3 +23,4 @@ CREATE TABLE Card_Info (
     FOREIGN KEY (user_id)
     REFERENCES User_Info(id),
 );
+
