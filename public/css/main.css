@@ -1,0 +1,27 @@
+
+body{
+    background-color: rgb(27, 27, 27);
+    text-align: center;
+}
+#welcome{
+    color: antiquewhite;
+    margin-top: 300px;
+    margin-bottom: 0px;
+    font-family: 'IM Fell Great Primer SC';
+    font-size: 150px;
+    }
+p{
+    color: aliceblue;
+    margin-top: 0px;
+    font-family: 'Montserrat Subrayada';
+}
+.text{
+    text-align: center;
+}
+button{
+    color: brown;
+    background-color: rgb(177, 177, 238);
+}
+button:hover{
+    background-color: blue;
+}

@@ -6,12 +6,12 @@ userData = require('./userSeed.json')
 
 const seedAll = async () => {
     await sequelize.sync({ force: false });
+
     const users = await UserInfo.bulkCreate(userData,
         {
             individualHooks: true,
             returing: true,
         });
-
 };
 
 seedAll();
