@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require('../../models/User');
 
 // GET one user
-router.get('/:id', async (req, res) => {
+router.get('/user/:id', async (req, res) => {
     try {
       const userData = await User.findByPk(req.params.id);
       if (!userData) {
@@ -19,6 +19,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
       const userData = await User.create(req.body);
+      res.render('userData', userData);
       res.status(200).json(userData);
     } catch (err) {
       res.status(400).json(err);
@@ -27,7 +28,7 @@ router.post('/', async (req, res) => {
   
   
 // PUT update a user
-router.put('/:id', async (req, res) => {
+router.put('/user/:id', async (req, res) => {
     try {
       const userData = await User.update(req.body, {
         where: {
