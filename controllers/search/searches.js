@@ -1,8 +1,8 @@
 const router = require('express').Router() 
 
 router.get('/', async (req, res) => {
-    const userInput = req.body.name
-    const userOption = req.body.type
+    const userInput = req.body.input
+    const userOption = req.body.option
     const api1 =  `https://api.magicthegathering.io/v1/cards?${userOption}=${userInput}`
 
     fetch(api1)
@@ -33,3 +33,5 @@ router.get('/', async (req, res) => {
             }
         })
 })
+
+module.exports = router
