@@ -3,8 +3,6 @@ const sequelize = require('../config/connection');
 
 class CardInfo extends Model {}
 
-// TODO: Add validations to the User model
-
 CardInfo.init(
   {
     card_name: {
