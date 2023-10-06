@@ -4,10 +4,10 @@ const sequelize = require('../config/connection');
 
 const seedAll = async () => {
     await sequelize.sync({ force: false });
-  await seedCards();
+  await seedCards;
   console.log('\n----- TAGS SEEDED -----\n');
 
-  await seedUsers();
+  await seedUsers;
   console.log('\n----- PRODUCT TAGS SEEDED -----\n');
 
   process.exit(0);
