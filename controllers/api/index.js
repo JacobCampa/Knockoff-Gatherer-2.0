@@ -3,7 +3,7 @@ const router = require('express').Router();
 const loginRoutes = require('./login-routes');
 const logoutRoutes = require('./logout-routes');
 const userRoutes = require('./user-routes');
-const savedCards = requestIdleCallback('./savedCards-routes');
+const savedCards = require('./savedCards-routes');
 
 
 router.use('/login', loginRoutes);

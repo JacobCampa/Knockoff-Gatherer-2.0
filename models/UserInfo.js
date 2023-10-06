@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class User extends Model {}
+class UserInfo extends Model {}
 
-User.init(
+UserInfo.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -37,14 +37,12 @@ User.init(
     },
     },
     {
-        hooks: {
-            beforeCreate: async (newUserData) => {
-                newUserData.email = await newUserData.email.toLowerCase();
-                return newUserData;
-            }
-        }        
-  },
-  {
+      hooks: {
+        beforeCreate: async (newUserData) => {
+          newUserData.email = await newUserData.email.toLowerCase();
+          return newUserData;
+        },
+      },
     sequelize,
     timestamps: false,
     freezeTableName: true,
@@ -53,4 +51,4 @@ User.init(
   }
 );
 
-module.exports = User;
+module.exports = UserInfo;
