@@ -32,7 +32,7 @@ User.init(
       allowNull: false,
       validate: {
           min: [8],
-          isAlphanumeric: true,
+          is : /^[0-9a-zA-Z_@./#&+!-]*$/i,
       }
     },
     },
