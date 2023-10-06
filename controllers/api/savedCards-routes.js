@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { cardInfo, userInfo } = require("../../models");
+const cardInfo = require("../../models");
 
 
 // http://localhost:3001/api/deck-routes
@@ -25,7 +25,7 @@ router.get('/api/savedCards/:id', async (req, res) => {
     }
 });
 
-  
+
 //get all cards
 router.get("/", async (req, res) => {
   try {
