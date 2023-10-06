@@ -1,0 +1,146 @@
+body {
+    background-color: #4F4F4F;
+}
+
+header {
+    background-image: url("./Pictures/manas.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 260px 0px 80px 0px;
+    border-radius: 0px 0px 50px 50px;
+    margin-bottom: 10px;
+    background-size: contain;
+    background-size: cover;
+}
+
+h3 {
+    color: white;
+    font-size: 27px;
+}
+
+li {
+    padding-left: 10px;
+    display: inline;
+    list-style: none;
+    color: #188a20;
+    font-size: 20px;
+}
+
+h1 {
+    color: #188a20;
+    stroke: black .5px;
+    text-align: center;
+    font-size: 75px;
+    font-family: 'Foldit', cursive;
+    font-family: 'Handjet', cursive;
+    font-family: 'MedievalSharp', cursive;
+}
+
+/* user input */
+form {
+    background-color: black;
+    margin-top: 10px;
+    padding: 50px;
+    border-radius: 50px;
+    width: 100%;
+}
+
+/* search bar */
+input{
+    margin: 0px 0px 10px 0px;
+}
+
+/* options in drop down */
+#select{
+    margin: 0px 0px 10px 0px;
+}
+
+/* submit button */
+#submit{
+    margin: 10px 0px 10px 0px;
+}
+
+/* indivudual divs for each card */
+#cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+/* each individual card */
+#cards img {
+    border-radius: 25px;
+    width: 325px;
+    height: 500px;
+    padding: 5px 5px 5px 5px;
+    background-color: black;
+    color: white;
+}
+
+/* divs created for each card */
+#cards div{
+    background-color: #188a20;
+    border: black 2px solid;
+    color: white;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+/* artist and set name of card */
+div div p{
+    margin-left: 20px;
+}
+
+/* enlarges card when hovered over */
+.hover div p{
+    margin-left: 15px;
+}
+.hover:hover {
+    transform: scale(1.2);
+    border: greenyellow 3px solid;
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+/* tablet view */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 150px 0px 25px 0px;
+    }
+    h1 {
+    color: #252be6;
+    font-size: 60px;
+  }
+  #cards div{
+      background-color: #252be6;
+      border: black 2px solid;
+      color: white;
+      border-radius: 25px;
+      margin: 10px;
+  }
+}
+/* smartphone view */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 100px 0px 15px 0px;
+    }
+    h1 {
+      color: red;    
+      padding: 20px 0px 20px 0px; 
+      font-size: 40px;
+    }
+    .hover:hover {
+        transform: scale(1.1);
+    }
+    #cards div{
+        background-color: #e51616;
+        border: black 2px solid;
+        color: white;
+        border-radius: 25px;
+        margin: 10px;
+    }
+  }
