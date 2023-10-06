@@ -9,3 +9,5 @@ user.hasMany(cards, {
 cards.belongsTo(user, {
     foreignKey: 'id',
 })
+
+module.exports = { user, cards }
