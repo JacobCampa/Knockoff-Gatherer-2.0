@@ -40,6 +40,7 @@ router.put('/user/:id', async (req, res) => {
         res.status(404).json({ message: 'No user with this id!' });
         return;
       }
+      res.render('userData', userData);
       res.status(200).json(userData);
     } catch (err) {
       res.status(500).json(err);
