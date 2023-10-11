@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./public/css/collection.css">
+    <!-- <link rel="stylesheet" href="./public/css/collection.css"> -->
 </head>
 <body>
     <div id="header"><ul>
         <li><a href="login.html">Logout</a></li>
         <li><a href="search.html"> search</a></li>
         <li><h1>{{Username}}</h1></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">collections</a>
-            <div class="dropdown-content">
-            <a href={{collection-link}}>{{collection-name}}</a>
-            <a href={{collection_link}}>{{collection-name}}</a>
-        </div></li>
+       </div></li>
+    
     </ul> </div>
+    <h1>Card Collection</h1>
+    <ul>
+        {{#each cards}}
+            <li>
+                <h2>{{card_name}}</h2>
+                <img src= {{card_art}} alt="">
+                <p>{{card_type}}
+                    {{rarity}}
+                    {{edition}}
+                    {{artist_name}}
+                </p>
+    
+            </li>
+        {{/each}}
+    </ul>
 </body>
 </html>

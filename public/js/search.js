@@ -20,6 +20,8 @@ function addHistory(searchedWord) {
     for (let index = 0; index < searchHistory.length; index++) {
   
       var li = document.createElement("li")
+      li.class = 'sli';
+        document.body.appendChild(li);
       li.textContent = searchHistory[index]
       pastSearches.append(li)
     } 
@@ -41,6 +43,8 @@ function callApis(event) {
             // first catch if the search aprameters find a bad request
             if (response.status !== 200) {
                 var message = document.createElement("h1")
+                message.class = 'sh1';
+                document.body.appendChild(h1);
                 message.innerHTML = `Something went wrong! Try again`
                 cards.appendChild(message)
             } else {
@@ -56,6 +60,8 @@ function callApis(event) {
             // second catch to determin if the search results are above zero
             if (cardsFound < 1) {
                 var message2 = document.createElement("h1")
+                message2.class = 'sh1';
+                document.body.appendChild(h1);
                 message2.innerHTML = `Something went wrong! Try again`
                 cards.appendChild(message2)
             } else {

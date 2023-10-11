@@ -1,19 +1,24 @@
-<h2 class="page-title">Sign up</h2>
+<body>
+    <div id="card"><h1>Sign-Up</h1>
+    <form>
+        <!-- first and last name -->
+        <label for="fname">Name</label><br>
+        <input type="text" id="fname" value="First Name">  <input type="text" id="lname" value="Last Name"><br> 
+        <!-- email -->
+        <label for="email">Email</label><br>
+        <input type="email" value="Exampl@mail.com" id="newEmail" class= "lbar"><br>
+        <!-- username -->
+        <label for="username">Username</label><br>
+        <input type="text" id="newUsername" value="username" class= "lbar"><br>
+       <!-- password -->
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="newpassword" class= "lbar" value="password"><br>
+        <!-- re enter the password for varification and to check they are the same -->
+        <label for="re-password">Re-enter Password</label><br>
+        <input type="password" name="re-password" id="re-password" class= "lbar" value="password"><br>
+       <!-- TODO: add what requirements we have for new passwords -->
+        <p>password requirements</p>
+        <button type="submit">submit</button>
+    </form></div>
 
-<form class="form signup-form" action="/signup" method="POST">
-  <div class="form-group">
-    <label for="username">Username:</label>
-    <input class="form-input" type="text" id="username-signup" name="username" />
-  </div>
-  <div class="form-group">
-    <label for="email">Email:</label>
-    <input class="form-input" type="text" id="email-signup" name="email"/>
-  </div>
-  <div class="form-group">
-    <label for="password">Password:</label>
-    <input class="form-input" type="password" id="password-signup" name="password" />
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">Sign up</button>
-  </div>
-</form>
+</body>

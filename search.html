@@ -10,19 +10,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Foldit:wght@300&family=Handjet:wght@300&family=MedievalSharp&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/search.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <title>Knockoff Gatherer</title>
 </head>
 
-<body>
-    <header>
+<body id="Sbody">
+    <header id="sheader"> <img src="./public/css/pictures/manas.png" alt="">
     </header>
     <section>
-        <h1>Magic the Gathering Card Search</h1>
+        <h1 class="sh1">Magic the Gathering Card Search</h1>
         <form>
             <!-- search bar -->
-            <input id="search" class="input is-success" type="text" placeholder="Search a Card!">
-            <div class="select is-success">
+            <input id="search" id="sinput" class="input is-success" type="text" placeholder="Search a Card!">
+            <div id="sdiv" class="select is-success">
                 <!-- search options -->
                 <select name="params" id="options">
                     <option value="name">Name</option>
@@ -34,7 +34,7 @@
                 </select>
             </div> <br>
             <button id="submit" class="button is-primary is-rounded is-hovered">Search Cards</button>
-            <h3>Previous Searches:</h3>
+            <h3 id="Sh3">Previous Searches:</h3>
             <section id="history">
             </section>
         </form>
