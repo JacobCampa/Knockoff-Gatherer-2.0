@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
     const { username, email, password } = req.body;
 
     // Check if a user with the same email already exists
-    const existingUser = await UserInfo.findOne({ where: { email } });
+    const existingUser = await User.findOne({ where: { email } });
 
     if (existingUser) {
       return res
@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
     }
 
     // Create a new user in the database
-    const newUser = await UserInfo.create({
+    const newUser = await User.create({
       username: username,
       email: email,
       password: password,
@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
     req.session.user_id = newUser.id;
     req.session.logged_in = true;
 
-    res.redirect("/dashboard");
+    res.redirect("/main");
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Registration failed" });

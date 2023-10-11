@@ -1,9 +1,9 @@
 const signupFormHandler = async (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
   
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+    const username = document.querySelector('#username').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value.trim();
   
     // Check if the required fields are not empty
     if (username && email && password) {
@@ -15,7 +15,7 @@ const signupFormHandler = async (event) => {
   
       if (response.ok) {
         alert('User registered successfully');
-        document.location.replace('/dashboard');
+        document.location.replace('/main');
       } else {
         alert('Failed to sign up.');
       }
