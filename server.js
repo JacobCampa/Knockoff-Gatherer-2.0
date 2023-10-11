@@ -3,6 +3,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const flash = require('express-flash');
+const bcrypt = require ('bcrypt');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -42,6 +43,6 @@ const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
