@@ -1,7 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registry</title>
+</head>
+
+
 <body id="m-body">
     <div id="m-img1"><img id="green" src="./public/css/pictures/green.png" alt=""><img id="white" src="./public/css/pictures/white.png" alt=""><img id="blue" src="./public/css/pictures/water.png" alt=""><img id="black" src="./public/css/pictures/black.png" alt=""><img id="red" src="./public/css/pictures/red.png" alt=""></div>
     <div class="text"> <h1 id="welcome">Welcome</h1>
     <p id="m-p">to [insert cool title here]</p></div>
     <div><button class="m-button" id="signupBT">Sign Up</button><button class="m-button" id="loginBT">Log In</button><button class="m-button" id="searchBT">Search</button></div>
+
+  <header class="display-flex justify-space-between align-center p-2">
+        <h1>
+      <a href="/">Home</a>
+    </h1>
+    <!-- Only display the logout button if the user is logged in -->
+<nav>
+  {{#if logged_in}}
+    <a href="/logout" id="logout">Logout</a>
+  {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Sign up</a>
+  {{/if}}
+</nav>
+  </header>
+  <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
+
+{{!-- Only include the logout script if the user is logged in --}}
+{{#if logged_in}}
     <script src="./public/js/main.js"></script>
+  {{/if}}
 </body>
+
+</html>
+

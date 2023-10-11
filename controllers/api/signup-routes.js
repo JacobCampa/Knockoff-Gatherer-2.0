@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const User = require('../../models/UserInfo')
+const User = require("../../models/UserInfo");
 
 // Route to render the signup page
 router.get("/", (req, res) => {
