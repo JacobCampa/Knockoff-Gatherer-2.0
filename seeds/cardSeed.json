@@ -4,6 +4,20 @@
         "card_type": "Creature",
         "rarity": "Rare",
         "edition": "Unstable",
-        "artist_name":"'Milivoi Ceran"
+        "artist_name":"Milivoi Ceran"
+    },
+    {
+        "card_name": "Force of Savagery",
+        "card_type": "Creature",
+        "rarity": "Rare",
+        "edition": "Future Sight",
+        "artist_name":"Dan Scott"
+    },
+    {
+        "card_name": "Scrambleverse",
+        "card_type": "Sorcery",
+        "rarity": "Rare",
+        "edition": "Magic 2012",
+        "artist_name":"Dan Scott"
     }
 ]
