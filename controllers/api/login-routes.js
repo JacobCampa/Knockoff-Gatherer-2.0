@@ -30,7 +30,7 @@ router.post("/api/login/routes", async (req, res) => {
     req.session.user_id = user.id;
     req.session.logged_in = true;
     req.flash("message", "Login successful");
-    return res.redirect('/dashboard');
+    return res.redirect('/main');
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Login failed" });
