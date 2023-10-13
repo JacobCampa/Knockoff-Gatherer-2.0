@@ -4,23 +4,20 @@
     <section>
         <h1 class="sh1">Magic the Gathering Card Search</h1>
         <form>
-            <!-- search bar -->
-            <input id="search" id="sinput" class="input is-success" type="text" placeholder="Search a Card!">
-            <div id="sdiv" class="select is-success">
-                <!-- search options -->
-                <select name="params" id="options">
-                    <option value="name">Name</option>
-                    <option value="cmc">Converted Mana Cost</option>
-                    <option value="type">Type</option>
-                    <option value="subtypes">Subtypes</option>
-                    <option value="rarity">Rarity</option>
-                    <option value="artist">Artist</option>
-                </select>
-            </div> <br>
+            <input type="text" placeholder="Card Name"> <input type="text" placeholder="Converted Mana Cost"> <input type="text" placeholder="Artist Name"> <br>
+            <label for="type">type:</label>
+            <select name="type" id="type">
+                <option value=""></option>
+            </select>
+            <label for="subtype">subtype</label>
+            <select name="subtype" id="subtype">
+                <option value=""></option>
+            </select>
+            <label for="rarity">Rarity</label>
+            <select name="rarity" id="rarity">
+                <option value=""></option>
+            </select><br>
             <button id="submit" class="button is-primary is-rounded is-hovered">Search Cards</button>
-            <h3 id="Sh3">Previous Searches:</h3>
-            <section id="history">
-            </section>
         </form>
         </select>
     </section>

@@ -1,24 +1,27 @@
-<body>
+<body id="Sbody">
     <div id="header"><ul>
-        <li><a href="login.html">Logout</a></li>
-        <li><a href="search.html"> search</a></li>
-        <li><h1>{{Username}}</h1></li>
+        <li><a href="/login">Logout</a></li>
+        <li><a href="/search"> search</a></li>
+        <li><h1>Username</h1></li>
        </div></li>
     
     </ul> </div>
     <h1>Card Collection</h1>
-    <ul>
-        {{#each cards}}
+       {{!-- {{#each cards}} --}}
+   <div class="flip-card"> 
+    <div class="flip-card-inner">
+        <div class="flip-card-front">  
+            <img id="cards" src='/css/pictures/FofS.png' alt="">
+    </div><div class="flip-card-back"><ul >
             <li>
-                <h2>{{card_name}}</h2>
-                <img src= {{card_art}} alt="">
-                <p>{{card_type}}
-                    {{rarity}}
-                    {{edition}}
-                    {{artist_name}}
+                <h2>Force of Savagery</h2>
+                <p>Creature
+                    Rare
+                    Future Sight
+                    Dan Scott
                 </p>
     
             </li>
-        {{/each}}
-    </ul>
+    </ul></div></div> </div>
+    {{!-- {{/each}} --}}
 </body>
