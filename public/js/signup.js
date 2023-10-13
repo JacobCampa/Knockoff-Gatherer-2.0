@@ -1,15 +1,16 @@
 const signupFormHandler = async (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
-  
-    const username = document.querySelector('#username').value.trim();
-    const email = document.querySelector('#email').value.trim();
-    const password = document.querySelector('#password').value.trim();
+    const fname = document.querySelector('#fname').value.trim();
+    const lname = document.querySelector('#lname').value.trim();
+    const username = document.querySelector('#newUsername').value.trim();
+    const email = document.querySelector('#newEmail').value.trim();
+    const password = document.querySelector('#newPassword').value.trim();
   
     // Check if the required fields are not empty
-    if (username && email && password) {
+    if (fname && lname && username && email && password) {
       const response = await fetch('/signup', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ fname, lname, username, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
