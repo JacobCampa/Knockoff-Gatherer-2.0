@@ -55,9 +55,12 @@ app.get('/', (req, res) => {
   app.get ('/signup', (req, res) => {
       res.render('signup', {layout: 'main'})
   });
-  app.get ('/search', (req, res) => {
-      res.render('search', {layout: 'main'})
-  });
+  app.get ('/searchengine', (req, res) => {
+    res.render('searchengine', {layout: 'main'})
+});
+app.get ('/collection', (req, res) => {
+  res.render('collection', {layout: 'main'})
+});
     
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
