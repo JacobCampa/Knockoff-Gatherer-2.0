@@ -2,7 +2,7 @@ var searchedWord = document.getElementById("search")
 var submit = document.querySelector("#submit")
 var cards = document.querySelector("#cards")
 var dropdown = document.querySelector("#options")
-const ApiRoute = '../controllers/search/searches.js'
+const path =  require ('../controllers/search/searches.js')
 
 
 function callApi(event) {
@@ -16,7 +16,7 @@ function callApi(event) {
     console.log(userInput)
     // 
     // calls first api to populate card images and info
-    fetch(ApiRoute)
+    fetch(path)
         .then((response) => {
             // first catch if the search aprameters find a bad request
             if (response.status !== 200) {
