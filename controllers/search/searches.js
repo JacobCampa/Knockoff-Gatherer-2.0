@@ -1,13 +1,19 @@
 const router = require('express').Router() 
-
-router.get('/', async (req, res) => {
-    const userInput = req.body.input
-    const userOption = req.body.option
-    const api =  `https://api.scryfall.com/cards/search?q=${userOption}=${userInput}`
+// localhost:33001/searchengine
+router.post('/', async (req, res) => {
+    const input = req.body.userInput
+    const userOption = req.body.userOption
+    console.log(input)
+    console.log(req.body)
+    const api =  `https://api.scryfall.com/cards/search?q=${input}`
+    console.log(api)
     fetch(api)
     .then((response) => {
-        console.log(response)
-        return response.json
+        return response.json()
+    })
+    .then((data) => {
+        console.log(data)
+        res.json(data)
     })
 })
 
