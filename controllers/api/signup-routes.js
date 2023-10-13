@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
     req.session.user_id = newUser.id;
     req.session.logged_in = true;
 
-    res.redirect("/main");
+    res.status(200).json(newUser)
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Registration failed" });
