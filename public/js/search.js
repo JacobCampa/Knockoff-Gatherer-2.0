@@ -2,7 +2,7 @@ var searchedWord = document.getElementById("search")
 var submit = document.querySelector("#submit")
 var cards = document.querySelector("#cards")
 var dropdown = document.querySelector("#options")
-const path =  require ('../controllers/search/searches.js')
+const path =  require('../controllers/search/searches.js')
 
 
 function callApi(event) {
