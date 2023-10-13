@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 // sign up route
 router.post("/", async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { fname, lname, username, email, password } = req.body;
 
     // Check if a user with the same email already exists
     const existingUser = await User.findOne({ where: { email } });
@@ -24,9 +24,11 @@ router.post("/", async (req, res) => {
 
     // Create a new user in the database
     const newUser = await User.create({
+      fname: fname,
+      lname: lname,
       username: username,
       email: email,
-      password: password,
+      password: password
     });
 
     req.session.user_id = newUser.id;

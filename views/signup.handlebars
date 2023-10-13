@@ -1,24 +1,43 @@
 <body>
-    <div id="card"><h1>Sign-Up</h1>
-    <form>
-        <!-- first and last name -->
-        <label for="fname">Name</label><br>
-        <input type="text" id="fname" value="First Name">  <input type="text" id="lname" value="Last Name"><br> 
-        <!-- email -->
-        <label for="email">Email</label><br>
-        <input type="email" value="Exampl@mail.com" id="newEmail" class= "lbar"><br>
-        <!-- username -->
-        <label for="username">Username</label><br>
-        <input type="text" id="newUsername" value="username" class= "lbar"><br>
-       <!-- password -->
-        <label for="password">Password</label><br>
-        <input type="password" name="password" id="newpassword" class= "lbar" value="password"><br>
-        <!-- re enter the password for varification and to check they are the same -->
-        <label for="re-password">Re-enter Password</label><br>
-        <input type="password" name="re-password" id="re-password" class= "lbar" value="password"><br>
-       <!-- TODO: add what requirements we have for new passwords -->
-        <p>password requirements</p>
-        <button type="submit">submit</button>
+  <div id="card"><h1>Sign-Up</h1>
+    <form class="signup-form">
+      <!-- first and last name -->
+      <label for="fname">First Name</label><br/>
+      <input type="text" id="fname" name="fname" placeholder="First Name"/><br/>
+      <label for="lname">Last Name</label><br/>
+      <input type="text" id="lname" name="lname" placeholder="Last Name"/><br/>
+      <!-- email -->
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        value="Example@mail.com"
+        id="newEmail"
+        class="lbar"
+      /><br />
+      <!-- username -->
+      <label for="username">Username</label><br />
+      <input type="text" id="newUsername" value="username" class="lbar" /><br />
+      <!-- password -->
+      <label for="password">Password</label><br />
+      <input
+        type="password"
+        name="password"
+        id="newPassword"
+        class="lbar"
+        value="password"
+      /><br />
+      <!-- re enter the password for varification and to check they are the same -->
+      <label for="re-password">Re-enter Password</label><br />
+      <input
+        type="password"
+        name="re-password"
+        id="re-password"
+        class="lbar"
+        value="password"
+      /><br />
+      <!-- TODO: add what requirements we have for new passwords -->
+      <p>password requirements</p>
+      <button type="submit">submit</button>
     </form></div>
 
 </body>
