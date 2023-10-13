@@ -9,6 +9,7 @@ router.get('/user/:id', async (req, res) => {
         res.status(404).json({ message: 'No user with this id!' });
         return;
       }
+      res.render('collection', { Username: userData.Username });
       res.status(200).json(userData);
     } catch (err) {
       res.status(500).json(err);
