@@ -1,9 +1,11 @@
+//Requirements
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 class UserInfo extends Model {}
 
+//Creates UserIfo Model. Sets each columns paramerters
 UserInfo.init(
   {
     id: {

@@ -26,7 +26,7 @@ router.get('/api/savedCards/:id', async (req, res) => {
 });
 
 
-//get all cards
+//GET all cards
 router.get("/", async (req, res) => {
   try {
     const cards = await cardInfo.findAll({

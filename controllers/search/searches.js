@@ -1,6 +1,8 @@
 const router = require('express').Router() 
+//POSTS user search
 // localhost:33001/searchengine
 router.post('/', async (req, res) => {
+    //gets user Input and Option picks ad plugs them into search API
     const input = req.body.userInput
     const userOption = req.body.userOption
     console.log(input)
@@ -8,9 +10,11 @@ router.post('/', async (req, res) => {
     const api =  `https://api.scryfall.com/cards/search?q=${input}`
     console.log(api)
     fetch(api)
+    //Returns JSON from search listed above
     .then((response) => {
         return response.json()
     })
+    //grabs JSON and makes Data
     .then((data) => {
         console.log(data)
         res.json(data)

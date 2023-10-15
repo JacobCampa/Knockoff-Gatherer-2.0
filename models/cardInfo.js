@@ -1,9 +1,10 @@
+//Requirements
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class CardInfo extends Model {}
 
-// TODO: Add validations to the CardInfo model
+// Makes model CardInfo. Sets Each cards parameters
 
 CardInfo.init(
   {
