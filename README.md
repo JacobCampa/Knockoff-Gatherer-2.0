@@ -1,25 +1,24 @@
 # Knockoff-Gatherer-2.0
 
-This is the first update to improve the application Knockoff Gatherer 1.0. Magic the Gathering is a trading card game with 40 million players and growing. The intended use of this applicaiton is to improve on the previous project and create a better user experience for both veteran and novice players.
-
+This is the first update to improve the application Knockoff Gatherer 1.0. Magic the Gathering is a trading card game with 40 million players and growing. The intended use of this applicaiton is to improve on the previous project and create a better user experience for both veteran and novice players. 
 ## User Story
-AS A Magic the Gathering enthusiast
+AS A Magic The Gathering enthusiast
  <br>
  <br>
-I WANT an improved card search applicaton
+I WANT an app that uses login functionality
 <br>
 <br>
-SO THAT I can imrpove my knowledge of the game.
+SO THAT I can securely save my cards and my searches
 
 ## Purpose 
 The purpose of this project is to improve on an existing project known as Knockoff Gatherer 1.0  by adding more features (link to previous GitHub reposistory down below). Some of the new features include, but are not limited to, account creation and user login. Below is a screen shot of the new main page.
 ![Alt text](<Screenshot 2023-10-13 at 12.15.55.png>)
 
-There have been many backend updates to this application but many frontend updates as well. On the frontend, a new main page was added along with a new login page. The search button will display the original card search layout from Knockoff Gatherer 1.0.
+There have been many backend updates to this application but many frontend updates as well. On the frontend, a new main page was added along with a new login page. The search button will display the an updated card search layout from Knockoff Gatherer 1.0.
 
 ## Feature Updates
 
-Future updates will be included as well. Plans for future development will include a deck builder and refined seaching. If you have any suggestions or requests for future updates please reach with you inquiry.
+Future updates will be included as well. Plans for future development will include a deck builder and refined seaching. Cards are also planned to be searchable by artist and will display card pricing.
 
 ## Link to deployed page
 
