@@ -1,39 +1,63 @@
 //requirements
 const express = require('express');
 const router = require('express').Router();
-const flash = require("express-flash");
-const { UserInfo } = require('../../models/UserInfo');
+const { user } = require('../../models');
 
+router.post('/', async (req, res) => {
+  try {
+    const userData = await user.create(req.body);
 
-router.use(flash());
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
 
-
-
-router.get("/login", (req, res) => {
-  res.render("login", { message: req.flash("message") });
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 
 //Logs in user
-router.post("/api/users/login", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
-    // Check if a user with the same email already exists
-    const { email, password } = req.body;
-    const user = await UserInfo.findOne({ where: { email } });
-//If the user's pawword doesn't line up, it will populate "Invalid credentials"
-    if (!user || !user.checkPassword(password)) {
-      return res.status(401).json({ error: "Invalid credentials" });
+    const userData = await user.findOne({ where: {email: req.body.email } });
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
     }
-//If the user and password match, it will populate "Loggin Successful"
-    req.session.user_id = user.id;
-    req.session.logged_in = true;
-    req.flash("message", "Login successful");
-    //Redirects to main page but logged in
-    return res.redirect('/main');
-  } catch (error) {
+    
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.json({ user: userData, message: 'You are now logged in'})
+    });
+  } catch (err) {
     //If there is an err in this process, show login failed. 
-    console.error(error);
-    res.status(500).json({ error: "Login failed" });
+    res.status(400).json(err);
+  }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 
