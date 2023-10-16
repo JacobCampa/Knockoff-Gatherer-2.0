@@ -1,11 +1,14 @@
 const logout = async () => {
-  res.session.destroy(err => {
-    if (err) {
-      resizeBy.status(400).send('Unable to log out')
-    } else {
-      resizeBy.send('Logout successful')
-    }
-  })
+  const response = await fetch('/api/login/logout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert('Failed to log out!!');
+  }
 };
 
 document.querySelector('#logout').addEventListener('click', logout);
