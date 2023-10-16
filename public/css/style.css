@@ -1,5 +1,9 @@
 
-
+.s-u-form{
+    padding: 10px 40px 40px 35%;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 20px;}
 
 /* css for the search page */
 #Sbody {
@@ -49,9 +53,11 @@
 form {
     background-color: black;
     margin-top: 10px;
-    padding: 50px;
+    padding: 54px;
     border-radius: 50px;
-    width: 100%;
+    width: 92%;
+    color: aliceblue;
+    
 }
 
 
@@ -275,7 +281,6 @@ form {
     background-color: black;
 }
 h1{
-    padding-top: 40px;
     text-align: center;
     color: aliceblue;
 }
@@ -344,11 +349,51 @@ label{
     backface-visibility: hidden;
   }
   .flip-card-front {
-    background-color: #bbb;
     color: black;
   }
   .flip-card-back {
-    background-color: dodgerblue;
+    background-color: #188a20;
+    border: black 2px solid;
     color: white;
+    border-radius: 25px;
+    margin: 10px;
     transform: rotateY(180deg);
   }
+  .flip-card-back h2{
+    padding-right: 10px;
+  }
+  #card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:rgb(86, 86, 86);
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+/* each individual card */
+#card img {
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    background-color: black;
+    color: white;
+}
+#header{
+    background-image: url("/css/pictures/manas.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 260px 0px 80px 0px;
+    border-radius: 0px 0px 50px 50px;
+    margin-bottom: 10px;
+    background-size: contain;
+
+}
+#header a{
+    margin-left: 10px;
+}
+.flip-card-back ul{
+    padding-right: 30px;
+    list-style: none;
+} 
