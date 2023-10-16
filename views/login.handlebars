@@ -1,18 +1,15 @@
+
 <body class="s-u-body">
-  <div class="s-u-card">
-    <h1>Login</h1>
-    <form class="s-u-form" action="/login" method="POST">
-      <!-- input for username or email -->
-      <label for="email-login">Username or Email</label><br>
-      <input type="text" class="email-login" id="email-login"><br>
-
-      <!-- input corresponding password -->
-      <label for="password-login">Password</label><br>
-      <input type="password" class="password-login" id="password-login"><br>
-
-      <!-- button to submit information for verification -->
-      <button type="submit">Log In!</button>
-    </form>
-  </div>
+  <div class="s-u-card"><H1>Login</H1>
+<form class="s-u-form login-form" action="/api/users/login" method="POST">
+    <!-- input for username or email -->
+    <label for="email">Email</label><br>
+    <input type="text" id="email-login"><br>
+    <!-- input coresponting password -->
+    <label for="Password">Password</label><br>
+    <input type="password" id="password-login"><br>
+    <!-- button to submit information for verification -->
+    <button type="submit">Log In!</button>
+  </form></div>  
   <script src="/js/login.js"></script>
 </body>

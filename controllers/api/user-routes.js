@@ -38,6 +38,7 @@ router.put('/user/:id', async (req, res) => {
         },
         individualHooks: true
       });
+      // If the user doesn't exist, thow "No user with this id".
       if (!userData[0]) {
         res.status(404).json({ message: 'No user with this id!' });
         return;

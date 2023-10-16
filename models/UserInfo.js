@@ -1,9 +1,19 @@
+//Requirements
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
-class UserInfo extends Model {}
+const isPassword = (value) => {
+  return /^[a-zA-Z0-9]+$/.test(value) && value.length >= 6;
+}
 
+class UserInfo extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
+
+//Creates UserIfo Model. Sets each columns paramerters
 UserInfo.init(
   {
     id: {
@@ -32,7 +42,8 @@ UserInfo.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-          min: [8],
+        min: [8],
+        ispassword: isPassword,
           is : /^[0-9a-zA-Z_@./#&+!-]*$/i,
       }
     },

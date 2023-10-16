@@ -36,6 +36,7 @@ router.post("/", async (req, res) => {
 
     res.status(200).json(newUser)
   } catch (error) {
+    //If there's an err, Registration fails.
     console.error(error);
     res.status(500).json({ error: "Registration failed" });
   }

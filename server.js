@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const exphbs = require("express-handlebars");
-const session = require("express-session");
+const session = require("express-session"); // Import express-session
 const flash = require("express-flash");
 const bcrypt = require("bcrypt");
 
@@ -21,7 +21,7 @@ const sess = {
   store: new session.MemoryStore(),
 };
 
-app.use(session(sess));
+app.use(session(sess)); // Use the session middleware before any other middlewares
 app.use(flash());
 
 app.use(express.json());
