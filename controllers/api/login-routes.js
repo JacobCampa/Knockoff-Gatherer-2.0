@@ -6,11 +6,7 @@ const { UserInfo } = require('../../models/UserInfo');
 
 
 router.use(flash());
-//gets the login handlebars
-// http://localhost:3001/login/api/login-routes
-router.get("/api/login-routes", (req, res) => {
-  res.render('login');
-});
+
 
 
 router.get("/login", (req, res) => {
@@ -19,7 +15,7 @@ router.get("/login", (req, res) => {
 
 
 //Logs in user
-router.post("/api/login/routes", async (req, res) => {
+router.post("/api/users/login", async (req, res) => {
   try {
     // Check if a user with the same email already exists
     const { email, password } = req.body;
