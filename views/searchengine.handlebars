@@ -28,4 +28,12 @@
     <section id="cards">
     </section>
     <script src="/js/search.js"></script>
+
+      {{#if logged_in}}
+    <a href="/logout" id="logout">Logout</a>
+  {{else}}
+    <a href="/login">Login</a>
+    <a href="/signup">Sign up</a>
+  {{/if}}
+
 </body>
