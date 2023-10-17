@@ -41,5 +41,18 @@ router.get("/", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+router.post('/api/savedCards/:id', async (req, res) => {
+  try {
+    const cardData = await cardInfo.findByPk(req.params.id);
+    if (!cardData) {
+      res.status(404).json({ message: 'No card with this id!' });
+      return;
+    }
+    res.status(200).json(cardData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
   
   module.exports = router;

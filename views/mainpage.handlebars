@@ -11,7 +11,7 @@
     <p id="m-p">MTG Collector's Hub</p></div>
 <nav>
     {{#if logged_in}}
-    <button class="m-button"> <a class="m-button" href="/logout" id="logout">Logout</a></button>
+    <button class="m-button" > <a id="logout">Logout</a></button>
     <button class="m-button"><a class="m-button"href="/collection">My Collection</a></button>
      {{else}}
     <button class="m-button" id="signupBT"><a class="m-button" href="/signup">Sign-Up</a></button>
@@ -20,5 +20,5 @@
     <button class="m-button" id="search"><a class="m-button" href="/searchengine">Search</a></button>
 </nav>
 
-    
+    <script src="/js/logout.js"></script>
 </body>
