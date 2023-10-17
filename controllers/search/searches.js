@@ -12,10 +12,11 @@ router.post('/', withAuth, async (req, res) => {
     const rarity = req.body.inputRarity
     const set = req.body.inputSet
     const artist = req.body.inputArtist
-    const api =  `https://api.magicthegathering.io/v1/cards?name=${cardName}&cmc=${cmc}&colors=${color}&types=${type}&subtypes=${subtype}&rarity=${rarity}&set=${set}&artist=${artist}`
+    const api =  `https://api.magicthegathering.io/v1/cards?name=${cardName}&cmc=${cmc}&colorIdentity=${color}&types=${type}&subtypes=${subtype}&rarity=${rarity}&setName=${set}&artist=${artist}`
     fetch(api)
     //Returns JSON from search listed above
     .then((response) => {
+        console.log(api)
         return response.json()
     })
     //grabs JSON and makes Data
