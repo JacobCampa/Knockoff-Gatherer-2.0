@@ -1,7 +1,8 @@
-const router = require('express').Router() 
+const router = require('express').Router();
+const withAuth = require('../../utils/auth');
 //POSTS user search
 // localhost:33001/searchengine
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     //gets user Input and Option picks ad plugs them into search API
     const input = req.body.userInput
     const userOption = req.body.userOption
