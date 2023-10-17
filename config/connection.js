@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-//gets squalize host info
+//gets sequelize host info
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
@@ -13,5 +13,5 @@ const sequelize = new Sequelize(
     port: 3306,
   }
 );
-//exports sequalize
+//exports sequelize
 module.exports = sequelize;
