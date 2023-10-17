@@ -16,13 +16,11 @@ router.post('/', withAuth, async (req, res) => {
     fetch(api)
     //Returns JSON from search listed above
     .then((response) => {
-        console.log(api)
         return response.json()
     })
     //grabs JSON and makes Data
     .then((data) => {
         res.json(data)
-        // res.render("searchengine", {data})
     })
 })
 
