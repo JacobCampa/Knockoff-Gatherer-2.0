@@ -1,16 +1,10 @@
 
-.s-u-form{
-    padding: 10px 40px 40px 35%;
-    border-radius: 10px;
-    color: aliceblue;
-    font-size: 20px;}
-
-/* css for the search page */
+/* body for the search page */
 #Sbody {
-    background-color: #4F4F4F;
+    background-image: linear-gradient( to right, #FFCB65, #1C92C9, #A8A39A, #FF6600, #1CC940  );
 }
 
-
+/* search engine header */
 #sheader {
     background-image: url("/css/pictures/manas.png");
     background-repeat: no-repeat;
@@ -40,24 +34,36 @@
 
 .sh1 {
     color: #188a20;
+    text-shadow: 0 0 5px whitesmoke;
     stroke: black .5px;
     text-align: center;
     font-size: 75px;
-    font-family: 'Foldit', cursive;
-    font-family: 'Handjet', cursive;
-    font-family: 'MedievalSharp', cursive;
+    font-family: 'IM Fell Great Primer SC';
 }
 
-
 /* user input */
-form {
+.s-form {
+    text-align: center;
+    background-color: black;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 50px;
+    width: 92%;
+    color: aliceblue;
+    font-family: 'Montserrat Subrayada';
+
+}
+
+#form {
     background-color: black;
     margin-top: 10px;
     padding: 54px;
     border-radius: 50px;
     width: 92%;
     color: aliceblue;
-    
+    text-align: center;
 }
 
 
@@ -102,11 +108,15 @@ form {
 
 /* divs created for each card */
 #cards div{
-    background-color: #188a20;
+    background-image: linear-gradient(45deg, rgb(45, 45, 45), rgb(123, 126, 160), rgb(45, 45, 45));
     border: black 2px solid;
     color: white;
+    text-shadow: 0 0 3px black;
     border-radius: 25px;
     margin: 10px;
+    text-align: center;
+    font-weight: 400;
+
 }
 
 
@@ -171,13 +181,14 @@ form {
     }
   }
 
-
-  /* mainpage css */
+/* mainpage body */
 #m-body{
     background-image: url(planeswalkersm1.png), linear-gradient(90deg, rgb(255, 255, 255) 0% , rgb(22, 22, 22) 55%);
    padding: auto;
     text-align: center;
 }
+
+
 #welcome{
     display: flex;
     justify-content: center;
@@ -300,6 +311,7 @@ input{
     background-color: rgb(56, 54, 54);
     border-radius: 10px;
     box-shadow: 0px 0px 50px cyan;
+    
 }
 .s-u-form{
     padding: 10px 40px 40px 35%;
