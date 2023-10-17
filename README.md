@@ -23,6 +23,8 @@ Future updates will be included as well. Plans for future development will inclu
 
 ## Link to deployed page
 
+https://mtg-search-engine-9599f588e5fc.herokuapp.com/
+
 ## Link to this repostory <br>(Knockeroff Gatherer 2.0)
 https://github.com/JacobCampa/Knockoff-Gatherer-2.0
 
