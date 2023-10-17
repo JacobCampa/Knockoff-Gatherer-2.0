@@ -1,19 +1,18 @@
+// Logs in an existing user
 const loginFormHandler = async (event) => {
   event.preventDefault();
-
-  console.log('Form submission initiated');
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
   if (email && password) {
-    const response = await fetch('/api/login/login', {
+    const response = await fetch('/api/login/login', { 
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/'); // Brings user back to the homepage
     } else {
       alert('Failed to log in.');
     }

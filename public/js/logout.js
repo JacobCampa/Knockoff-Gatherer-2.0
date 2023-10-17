@@ -1,3 +1,5 @@
+// Logs out a user that is currently logged in
+
 const logout = async () => {
   const response = await fetch('/api/login/logout', {
     method: 'POST',

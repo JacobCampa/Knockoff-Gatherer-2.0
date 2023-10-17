@@ -12,7 +12,7 @@ const signupFormHandler = async (event) => {
         body: JSON.stringify({ fname, lname, username, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+  // Bring user back to main page with login is successful
       if (response.ok) {
         document.location.replace('/');
       } else {
