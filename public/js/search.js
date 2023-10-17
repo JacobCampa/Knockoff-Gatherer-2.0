@@ -1,27 +1,27 @@
-var submit = document.querySelector("#submit")
-var cards = document.querySelector("#cards")
-var cardName = document.getElementById("cardName")
-var cmc = document.getElementById("cmc")
-var color = document.getElementById("color")
-var type = document.getElementById("type")
-var subtype = document.getElementById("subtype")
-var rarity = document.getElementById("rarity")
-var set = document.getElementById("set")
-var artist = document.getElementById("artist")
+const submit = document.querySelector("#submit")
+const cards = document.querySelector("#cards")
+const cardName = document.getElementById("cardName")
+const cmc = document.getElementById("cmc")
+const color = document.getElementById("color")
+const type = document.getElementById("type")
+const subtype = document.getElementById("subtype")
+const rarity = document.getElementById("rarity")
+const set = document.getElementById("set")
+const artist = document.getElementById("artist")
 
 function callApi(event) {
     // prevents multiple searches to populate at once
     cards.innerHTML = ""
     // keeps current search in search bar
     event.preventDefault()
-    var inputName = cardName.value
-    var inputCmc = cmc.value
-    var inputColor = color.value
-    var inputType = type.value
-    var inputSubtype = subtype.value
-    var inputRarity = rarity.value
-    var inputSet = set.value
-    var inputArtist = artist.value
+    const inputName = cardName.value
+    const inputCmc = cmc.value
+    const inputColor = color.value
+    const inputType = type.value
+    const inputSubtype = subtype.value
+    const inputRarity = rarity.value
+    const inputSet = set.value
+    const inputArtist = artist.value
 
     fetch("/search", {method: "POST", body: JSON.stringify({ inputName, inputCmc, inputColor, inputType, inputSubtype, inputRarity, inputSet, inputArtist }), headers: {'Content-Type': 'application/json'}})
         .then((response) => {
