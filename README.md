@@ -8,7 +8,8 @@ AS A Magic The Gathering enthusiast
 I WANT an app that uses login functionality
 <br>
 <br>
-SO THAT I can securely save my cards and my searches
+SO THAT I can look up cards to make my decks better
+
 
 ## Purpose 
 The purpose of this project is to improve on an existing project known as Knockoff Gatherer 1.0  by adding more features (link to previous GitHub reposistory down below). Some of the new features include, but are not limited to, account creation and user login. Below is a screen shot of the new main page.
