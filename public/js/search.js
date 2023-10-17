@@ -23,14 +23,13 @@ function callApi(event) {
     var inputSet = set.value
     var inputArtist = artist.value
 
-    fetch("/search", {method: "POST", body: JSON.stringify({inputName, inputCmc, inputColor, inputType, inputSubtype, inputRarity, inputSet, inputArtist}), headers: {'Content-Type': 'application/json'}})
+    fetch("/search", {method: "POST", body: JSON.stringify({ inputName, inputCmc, inputColor, inputType, inputSubtype, inputRarity, inputSet, inputArtist }), headers: {'Content-Type': 'application/json'}})
         .then((response) => {
             // first catch if the search aprameters find a bad request
             if (response.status !== 200) {
             } else {
                 return response.json()
                 .then((response) => {
-                    console.log(response)
                     response.cards.forEach((card , index) => {
                         const cardDiv = document.createElement('div')
                         const cardInfo = document.createElement("div")
