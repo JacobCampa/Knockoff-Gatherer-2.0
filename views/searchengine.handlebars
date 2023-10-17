@@ -3,10 +3,10 @@
     </header>
     <section>
         <h1 class="sh1">Magic the Gathering Card Search</h1>
-        <form>
+        <form class="s-form">
             <h1>Search By:</h1>
-            <input id="cardName" type="text" placeholder="Card Name"><br>
-            <input id="cmc" type="text" placeholder="Converted Mana Cost"><br>
+            <input id="cardName" type="text" placeholder="Card Name">
+            <input id="cmc" type="text" placeholder="Converted Mana Cost">
             <label for="color">Color:</label>
             <select name="color" id="color">
                 <option value="">Any</option>
@@ -16,24 +16,25 @@
                 <option value="R">Red</option>
                 <option value="G">Green</option>
             </select><br>
-            <input id="type" type="type" placeholder="Type"><br>
-            <input id="subtype" type="subtype" placeholder="Subtype"><br>
+            <input id="type" type="type" placeholder="Type">
+            <input id="subtype" type="subtype" placeholder="Subtype">
             <input id="rarity" type="rarity" placeholder="Rarity"><br>
-            <input id="set" type="set" placeholder="Set"><br>
+            <input id="set" type="set" placeholder="Set">
             <input id="artist" type="artist" placeholder="Artist"><br>
             <button id="submit" class="button is-primary is-rounded is-hovered">Search Cards</button>
         </form>
         </select>
+            {{#if logged_in}}
+    <a class="m-button" href="/" id="logout">Logout</a>
+  {{else}}
+    <a class="m-button" href="/login">Login</a>
+    <a class="m-button" href="/signup">Sign up</a>
+  {{/if}}
+
     </section>
     <section id="cards">
     </section>
     <script src="/js/search.js"></script>
-
-      {{#if logged_in}}
-    <a href="/logout" id="logout">Logout</a>
-  {{else}}
-    <a href="/login">Login</a>
-    <a href="/signup">Sign up</a>
-  {{/if}}
+    <script src="/js/logout.js"></script>
 
 </body>
